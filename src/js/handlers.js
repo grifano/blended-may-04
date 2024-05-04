@@ -1,13 +1,17 @@
 import { refs } from './refs';
 
+let currentIntervalID;
+
 export const onBtnClick = event => {
   if (event.target.dataset.action === 'increment') {
-    setInterval(() => {
+    clearInterval(currentIntervalID);
+    currentIntervalID = setInterval(() => {
       refs.counterValue.textContent = refs.number++;
     }, 1000);
   }
   if (event.target.dataset.action === 'decrement') {
-    setInterval(() => {
+    clearInterval(currentIntervalID);
+    currentIntervalID = setInterval(() => {
       refs.counterValue.textContent = refs.number--;
     }, 1000);
   }
