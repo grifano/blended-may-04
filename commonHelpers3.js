@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";const t={counterValue:document.querySelector(".counter-value"),buttons:document.querySelectorAll(".counter-button"),number:0},n=e=>{e.target.dataset.action==="increment"&&setInterval(()=>{t.counterValue.textContent=t.number++},1e3),e.target.dataset.action==="decrement"&&setInterval(()=>{t.counterValue.textContent=t.number--},1e3)};t.buttons.forEach(e=>{e.addEventListener("click",n)});
+//# sourceMappingURL=commonHelpers3.js.map
